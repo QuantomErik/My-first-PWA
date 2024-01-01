@@ -1,7 +1,7 @@
 {
     "name": "QuantumApplication",
     "short_name": "QuantumApplication",
-    "start_url": "/",
+    "start_url": "https://lucky-dasik-36ff74.netlify.app/",
     "display": "standalone",
     "background_color": "#ffe001",
     "description": "PWA including a dock, memory game and a weather app.",
