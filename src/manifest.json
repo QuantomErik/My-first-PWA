@@ -17,7 +17,7 @@
         "type": "image/png"
       },
       {
-        "src": "/images/egg512.png",
+        "src": "../dist/assets/egg512.png",
         "sizes": "512x512",
         "type": "image/png"
       }
