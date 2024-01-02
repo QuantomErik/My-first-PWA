@@ -1,3 +1,8 @@
+const IMG_URL = (new URL('images/memory-game.png', import.meta.url)).href
+const IMG_URL2 = (new URL('images/chat-box.png', import.meta.url)).href
+const IMG_URL3 = (new URL('images/custom.png', import.meta.url)).href
+
+
 import '../messageApp/index.js'
 
 const template = document.createElement('template')
@@ -32,9 +37,12 @@ template.innerHTML = `
   }
 </style>
 <div id="app-dock">
-  <img id="memoryGameIcon" src="js/components/dock/images/memory-game.png" class="app-icon">
+  <img id="memoryGameIcon" src="${IMG_URL}" class="app-icon">
+  <img id="messagesAppIcon" src="${IMG_URL2}" class="app-icon">
+  <img id="customAppIcon" src="${IMG_URL3}" class="app-icon">
+  <!-- <img id="memoryGameIcon" src="js/components/dock/images/memory-game.png" class="app-icon">
   <img id="messagesAppIcon" src="js/components/dock/images/chat-box.png" class="app-icon">
-  <img id="customAppIcon" src="js/components/dock/images/custom.png" class="app-icon">
+  <img id="customAppIcon" src="js/components/dock/images/custom.png" class="app-icon"> -->
 </div>
 `
 
