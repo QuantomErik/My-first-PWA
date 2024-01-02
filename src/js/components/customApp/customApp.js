@@ -1,6 +1,17 @@
 const IMG_URL = (new URL('images/magnifying-glass.png', import.meta.url)).href
 const IMG_URL2 = (new URL('images/position.png', import.meta.url)).href
 
+const IMG_SNOW = (new URL('images/snowing.png', import.meta.url)).href
+const IMG_CLOUDS = (new URL('images/cloud.png', import.meta.url)).href
+const IMG_MIST = (new URL('images/rain-drops.png', import.meta.url)).href
+const IMG_HAZE = (new URL('images/cloudy-day.png', import.meta.url)).href
+const IMG_CLEAR = (new URL('images/sun.png', import.meta.url)).href
+const IMG_RAIN = (new URL('images/raining.png', import.meta.url)).href
+const IMG_SUNNY = (new URL('images/sun.png', import.meta.url)).href
+const IMG_WINDICON = (new URL('images/wind.png', import.meta.url)).href
+const IMG_HUMIDITYICON = (new URL('images/droplet.png', import.meta.url)).href
+
+
 const template = document.createElement('template')
 template.innerHTML = `
   <style>
@@ -675,7 +686,30 @@ requestLocationAccess() {
         this.shadowRoot.getElementById('Window').classList.add('expanded')
         await this.fetchWeatherForecast(city)
 
+
+        const IMG_SNOW = (new URL('images/snowing.png', import.meta.url)).href
+        const IMG_CLOUDS = (new URL('images/cloud.png', import.meta.url)).href
+        const IMG_MIST = (new URL('images/rain-drops.png', import.meta.url)).href
+        const IMG_HAZE = (new URL('images/cloudy-day.png', import.meta.url)).href
+        const IMG_CLEAR = (new URL('images/sun.png', import.meta.url)).href
+        const IMG_RAIN = (new URL('images/raining.png', import.meta.url)).href
+        const IMG_SUNNY = (new URL('images/sun.png', import.meta.url)).href
+        const IMG_WINDICON = (new URL('images/wind.png', import.meta.url)).href
+        const IMG_HUMIDITYICON = (new URL('images/droplet.png', import.meta.url)).href
+
         const weatherStateImages = {
+          snow: `${IMG_SNOW}`,
+          clouds: `${IMG_CLOUDS}`,
+          mist: 'js/components/customApp/images/rain-drops.png',
+          haze: 'js/components/customApp/images/cloudy-day.png',
+          clear: 'js/components/customApp/images/sun.png',
+          rain: 'js/components/customApp/images/raining.png',
+          sunny: 'js/components/customApp/images/sun.png',
+          drizzle: 'js/components/customApp/images/rain-drops.png',
+          fog: 'js/components/customApp/images/cloud.png'
+        }
+
+        /* const weatherStateImages = {
           snow: 'js/components/customApp/images/snowing.png',
           clouds: 'js/components/customApp/images/cloud.png',
           mist: 'js/components/customApp/images/rain-drops.png',
@@ -685,7 +719,7 @@ requestLocationAccess() {
           sunny: 'js/components/customApp/images/sun.png',
           drizzle: 'js/components/customApp/images/rain-drops.png',
           fog: 'js/components/customApp/images/cloud.png'
-        }
+        } */
 
         const weatherState = data.weather[0].main.toLowerCase()
         const weatherImageSrc = weatherStateImages[weatherState]
