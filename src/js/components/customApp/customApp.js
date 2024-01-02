@@ -1,5 +1,6 @@
 const IMG_URL = (new URL('images/magnifying-glass.png', import.meta.url)).href
 const IMG_URL2 = (new URL('images/position.png', import.meta.url)).href
+const IMG_ERROR = (new URL('images/error.png', import.meta.url)).href
 
 const IMG_SNOW = (new URL('images/snowing.png', import.meta.url)).href
 const IMG_CLOUDS = (new URL('images/cloud.png', import.meta.url)).href
@@ -655,7 +656,7 @@ requestLocationAccess() {
 
       if (!city) {
         console.error('No city provided.')
-        weatherImage.src = 'js/components/customApp/images/error.png'
+        weatherImage.src = IMG_ERROR
         cityNameDisplay.textContent = 'No city provided'
         weatherPageContainer.style.display = 'none'
 
@@ -728,7 +729,7 @@ requestLocationAccess() {
         console.log(data)
       } catch (error) {
         console.error('Error fetching weather data:', error)
-        weatherImage.src = 'js/components/customApp/images/error.png'
+        weatherImage.src = IMG_ERROR
         cityNameDisplay.textContent = 'No city provided'
         weatherPageContainer.style.display = 'none'
       }
