@@ -656,7 +656,7 @@ requestLocationAccess() {
 
       if (!city) {
         console.error('No city provided.')
-        weatherImage.src = IMG_ERROR
+        weatherImage.src = `${IMG_ERROR}`
         cityNameDisplay.textContent = 'No city provided'
         weatherPageContainer.style.display = 'none'
 
@@ -729,7 +729,7 @@ requestLocationAccess() {
         console.log(data)
       } catch (error) {
         console.error('Error fetching weather data:', error)
-        weatherImage.src = IMG_ERROR
+        weatherImage.src = `${IMG_ERROR}`
         cityNameDisplay.textContent = 'No city provided'
         weatherPageContainer.style.display = 'none'
       }
